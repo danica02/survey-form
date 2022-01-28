@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>SURVEY FORM</title>
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/sass/style.css">
+    </head>
+
+    <body style="background-image: url('samgyup-bg.png');">
+
+        <div class="form-style-10">
+            <h1 id="title">SAMGYUP SA BAHAY SET !
+                <p id="description">Samgyup on special occasion or simply craving on a regular day? Reserve NOW !</p>
+            </h1>
+            <form id="survey-form">
+                <div class="section">Customer Information</div>
+                <div class="inner-wrap">
+                    <label id="name-label">Name <input type="text" id="name" name="name" /></label>
+                    <label id="email-label">Email <input type="email" id="email" name="email" data-rule="required|email" /></label>
+                    <label id="email-label">Address <input type="text" id="address" name="address" /></label>
+                    <label id="number-label">Phone Number <input type="text" id="number" name="number" data-rule="integer|min-7|max-11" /></label>
+                </div> 
+                <div class="section">Reservation Details</div>
+                    <div class="inner-wrap">
+                        <label id="email-label">Reservation Date <input type="date" id="date" name="date" /></label>
+                    </div>
+
+                    <div class="inner-wrap">
+                        <label class="radio">What do you prefer ?</p>
+                            <label class="container">Delivery
+                                <input type="radio" checked="checked" value="delivery" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="container">Pick Up
+                                <input type="radio" checked="checked" value="pickup" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="container">Self Booking
+                                <input type="radio" checked="checked" value="selfbooking" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </label>
+                        <br />
+                        <label id="email-label">Preferred Delivery Time <input type="time" id="time" name="time" /></label>
+                    </div>
+                    
+                    <div class="inner-wrap">
+                        <label class="radio"> Addition for 1 more tab of : (optional)
+                            
+                            <label class="container">Kimchi
+                                <input type="checkbox" checked="checked" value="kimchi">
+                                <span class="check"></span>
+                            </label>
+
+                            <label class="container">Lettuce
+                                <input type="checkbox" value="lettuce">
+                                <span class="check"></span>
+                            </label>
+
+                            <label class="container">Tteokbokki
+                                <input type="checkbox" value="tteokbokki">
+                                <span class="check"></span>
+                            </label>
+
+                            <label class="container">Marble Potatoes
+                                <input type="checkbox" value="potato">
+                                <span class="check"></span>
+                            </label>
+
+                            <label class="container">Cheese
+                                <input type="checkbox" value="cheese">
+                                <span class="check"></span>
+                            </label>
+
+                            <label class="container">Ssamjang
+                                <input type="checkbox" value="ssamjang">
+                                <span class="check"></span>
+                            </label>
+                        </label>
+                    </div>
+
+                    <div class="inner-wrap">
+
+                        <label class="container">Rent a Griller (200 for 3HOURS)
+                            <input type="radio" checked="checked" value="selfbooking" name="radio1">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Avail Griller (799 PESOS)
+                            <input type="radio" checked="checked" value="avail" name="radio1">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">NONE
+                            <input type="radio" checked="checked" value="no" name="radio1">
+                            <span class="checkmark"></span>
+                        </label>         
+
+                        <br />
+
+                        <label class="dropdown">Mode of Payment
+                            <select id="dropdown" name="payment" data-rule="required">
+                                <option disabled selected value></option>
+                                <option value="cod">Cash on Delivery</option>
+                                <option value="bank">Bank Transfer</option>
+                                <option value="gcash">GCash</option>
+                                <option value="otc">Over the counter</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="inner-wrap">
+                        <label class="dropdown">Any comments or suggestions?
+                            <textarea id="comments" class="input-textarea" name="comment"
+                                placeholder="Enter your comment here..."></textarea>
+                        </label>
+                    </div>
+
+                    <div class="button-section">
+                        <button type="submit" id="submit" class="submit-button">
+                            Submit
+                        </button>
+                    </div>
+            </form>
+        </div>
+
+    </body>
+</html>
