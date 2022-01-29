@@ -1,10 +1,23 @@
+$bg-color: #A49393;
+$display-block: block;
+$font-style:  Arial, Helvetica, sans-serif;
+
+@mixin import-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #E9DDD4;    
+}
+
 body{
     background-size: 100%;
     background-repeat: repeat;
     margin: 0;
 
     #description{
-        font: 13px Arial, Helvetica, sans-serif;
+        font: 13px $font-style;
         margin-top: 2px;
     }
 
@@ -28,30 +41,30 @@ body{
     }
 
     h1{
-        background: #A49393;
+        background: $bg-color;
         padding: 20px 30px 15px 30px;
         margin: -30px -30px 30px -30px;
         border-radius: 10px 10px 0 0;
         color: #fff;
-        font: normal 30px 'Bitter', serif;
-        border: 1px solid #A49393;
+        font: normal 30px $font-style;
+        border: 1px solid $bg-color;
 
         > span{
-            display: block;
+            display: $display-block;
             margin-top: 2px;
-            font: 13px Arial, Helvetica, sans-serif;
+            font: 13px $font-style;
         }
     }
 
     label{
-        display: block;
-        font: 15px Arial, Helvetica, sans-serif;
+        display: $display-block;
+        font: 15px $font-style;
         color: #888;
         margin-bottom: 15px;
     }
 
     .section{
-        font: normal 20px 'Bitter', serif;
+        font: normal 20px $font-style;
         color: #67595E;
         margin-bottom: 5px;
 
@@ -72,7 +85,7 @@ body{
         padding: 8px 20px 8px 20px;
         color: #fff;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-        font: normal 30px 'Bitter', serif;
+        font: normal 30px $font-style;
         border: 1px solid #257C9E;
         font-size: 15px;
 
@@ -84,7 +97,7 @@ body{
     .privacy-policy{
         float: right;
         width: 250px;
-        font: 12px Arial, Helvetica, sans-serif;
+        font: 12px $font-style;
         color: #4D4D4D;
         margin-top: 10px;
         text-align: right;
@@ -92,7 +105,7 @@ body{
 }
 
 .container {
-    display: block;
+    display: $display-block;
     position: relative;
     padding-left: 35px;
     margin-top: 12px;
@@ -108,7 +121,7 @@ body{
   }
 
   #dropdown, select, input, textarea {
-    display: block;
+    display: $display-block;
     width: 100%;
     padding: 8px;
     border-radius: 6px;
@@ -117,34 +130,23 @@ body{
 }
 
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #E9DDD4;
+    @include import-check;
     border-radius: 50%;
   }
 
   input:checked ~ .checkmark {
-    background-color: #A49393;
+    background-color: $bg-color;
 
     :after {
-        display: block;
+        display: $display-block;
       }
   }
 
   .check {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #E9DDD4;
-
+    @include import-check;
   }
 
-  .check:after {
+  .checkmark:after {
     content: "";
     position: absolute;
     display: none;
@@ -152,17 +154,21 @@ body{
     top: 5px;
     width: 5px;
     height: 10px;
+  }
+
+  .check:after {
+   @extend .checkmark:after;
     border: solid white;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
   }
   
   input:checked ~ .check {
-    background-color: #A49393;
+    background-color: $bg-color;
   }
 
   input:checked ~ .check:after {
-    display: block;
+    display: $display-block;
   }
 
 

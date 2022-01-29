@@ -3,7 +3,6 @@
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>SURVEY FORM</title>
-    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/sass/style.css">
     </head>
 
@@ -13,13 +12,13 @@
             <h1 id="title">SAMGYUP SA BAHAY SET !
                 <p id="description">Samgyup on special occasion or simply craving on a regular day? Reserve NOW !</p>
             </h1>
-            <form id="survey-form">
+            <form id="survey-form" method="gets">
                 <div class="section">Customer Information</div>
                 <div class="inner-wrap">
                     <label id="name-label">Name <input type="text" id="name" name="name" /></label>
                     <label id="email-label">Email <input type="email" id="email" name="email" data-rule="required|email" /></label>
                     <label id="email-label">Address <input type="text" id="address" name="address" /></label>
-                    <label id="number-label">Phone Number <input type="text" id="number" name="number" data-rule="integer|min-7|max-11" /></label>
+                    <label id="number-label">Phone Number <input type="text" id="number" name="number" pattern=[0-9]{11} placeholder="09XXXXXXXXX" /></label>
                 </div> 
                 <div class="section">Reservation Details</div>
                     <div class="inner-wrap">
